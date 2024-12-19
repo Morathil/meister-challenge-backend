@@ -25,3 +25,8 @@ Things you may want to cover:
 
 
 - Created new app with `rails new meister-challenge`
+- `bin/rails generate model Project name:string`
+- `bin/rails db:migrate`
+- `bin/rails generate model Task name:string project:references`
+- Add `has_many :tasks` to project model
+
