@@ -51,3 +51,8 @@ query_string = "
 }"
 MeisterChallengeSchema.execute(query_string)
 ```
+- Disable cors in config and `gem install rack-cors`
+- Disable `forgery_protection_origin_check` for development
+- Disable `skip_before_action :verify_authenticity_token` in graphql controller
+- Refactored graphql for actual use case (all and not by id)
+

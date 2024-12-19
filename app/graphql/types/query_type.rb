@@ -24,6 +24,10 @@ module Types
     # class QueryType < GraphQL::Schema::Object
     #   description "The query root of this schema"
     
-    field :project, resolver: Resolvers::ProjectResolver
+    field :projects, [Types::ProjectType], null: false, description: "Return a list of projects"
+
+    def projects
+      Project.all
+    end 
   end
 end
