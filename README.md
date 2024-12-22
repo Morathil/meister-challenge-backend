@@ -1,6 +1,7 @@
 # Meister Challenge
 ## Start Projects
 ### Server
+- First time migrate database: `rails db:migrate`
 - Start redis `redis-server`
 - Start server `bin/rails s`
 - Start sidekiq `bundle exec sidekiq`
