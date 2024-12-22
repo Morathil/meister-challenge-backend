@@ -25,9 +25,16 @@ module Types
     #   description "The query root of this schema"
     
     field :projects, [Types::ProjectType], null: false, description: "Return a list of projects"
+    field :tasks, [Types::TaskType], null: false do
+      argument :project_id, ID, required: true
+    end
 
     def projects
       Project.all
-    end 
+    end
+
+    def tasks(project_id:)
+      Task.where(project_id:)
+    end
   end
 end
