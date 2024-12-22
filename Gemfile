@@ -65,7 +65,6 @@ end
 gem "graphql", "~> 2.4"
 gem "graphiql-rails", group: :development
 gem 'rack-cors'
-gem 'whenever', require: false
 gem 'sidekiq'
 gem 'sidekiq-cron', '~> 1.0'
 gem 'redis'
