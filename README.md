@@ -12,13 +12,13 @@
 
 ## Considerations
 ### Single Project / Two projects
-- I opted to separate the frontend and backend into two distinct projects: a standalone frontend and a Rails backend API. While Rails' asset pipeline has its advantages, it had been a while since II last used it, and setting up a separate client project was faster and more comfortable for me.
+- I opted to separate the frontend and backend into two distinct projects: a standalone frontend and a Rails backend API. While Rails' asset pipeline has its advantages, it had been a while since I last used it, and setting up a separate client project was faster and more comfortable for me.
 - This approach aligns with creating a Rails server designed solely as an API, enabling it to support multiple clients in the future.
-- To make this setup functional, I had to enable CORS and disable verify_authenticity_token. In a production environment, these settings should be carefully reviewed and securely configured.
+- To make this setup functional, I had to enable CORS and disable verify_authenticity_token. In a production environment, these settings should be carefully reviewed and configured securely.
 
-### Automatic UI Updates
+### Realtime UI Updates
 - For real-time updates, I considered a simple polling mechanism as a quick solution. However, I chose a more elegant approach by implementing GraphQL subscriptions with ActionCable, which allowed for real-time updates without polling.
-- This added complexity and took extra time since it was my first time setting up GraphQL subscriptions with Actioncable on the server side, but it was a valuable learning experience.
+- This added complexity took extra time since it was my first time setting up GraphQL subscriptions with Actioncable on the server side, but it was a valuable learning experience.
 - On the client side, I used Apollo.js as the GraphQL library, which seamlessly integrates with ActionCable. For a use case without subscriptions, I would have opted for a more lightweight package like graphql-request.
 
 ## Client
